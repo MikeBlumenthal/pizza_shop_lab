@@ -1,0 +1,7 @@
+<h2>All The Orders!</h2>
+
+<ul style="list-style-type:circle">
+  <% @orders.each do |order| %>
+  <li> <%= order.pretty_name%>: <%=order.quantity%> <%= order.topping%></li>
+  <% end %>
+</ul>

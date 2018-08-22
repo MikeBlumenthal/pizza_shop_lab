@@ -1,0 +1,40 @@
+<form method="post" action="/pizza-orders/<%=@order.id%>/delete">
+  <label for="first-name">First Name:</label>
+    <input id="first-name" type="text" name="first_name" value="<%=@order.first_name%>" />
+
+
+  <label for="last-name">Last Name:</label>
+    <input id="last-name" type="text" name="last_name" value="<%=@order.last_name%>">
+
+
+  <label for="pizza-select">Select a pizza:</label>
+    <select id="pizza-select" name="topping">
+      <%if @order.topping == "Margherita"%>
+      <option value="Margherita" selected>Margherita</option>
+      <%else%>
+      <option value="Margherita">Margherita</option>
+      <%end%>
+      <%if @order.topping == "Pepperoni"%>
+      <option value="Pepperoni" selected>Pepperoni</option>
+      <%else%>
+      <option value="Pepperoni">Pepperoni</option>
+      <%end%>
+      <%if @order.topping == "Italian Sausage"%>
+      <option value="Italian Sausage" selected>Italian Sausage</option>
+      <%else%>
+      <option value="Italian Sausage">Italian Sausage</option>
+      <%end%>
+      <%if @order.topping == "Calzone"%>
+      <option value="Calzone" selected>Calzone</option>
+      <%else%>
+      <option value="Calzone">Calzone</option>
+      <%end%>
+    </select>
+
+
+  <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" name="quantity" value="<%=@order.quantity%>"/>
+
+
+  <input type='submit' value="DESTROY PIZZA"/>
+</form>
